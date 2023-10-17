@@ -20,7 +20,8 @@ const EditReview = () => {
 
   const handleSubmitEdit = async (evt) => {
     evt.preventDefault()
-    await shopService.crea
+    await shopService.updateReview(shopId, reviewId, reviewFormData)
+    navigate(`/shops/${shopId}`)
   }
 
   return (
